@@ -1,0 +1,99 @@
+include ./componentesPug/mixins.pug
+mixin pregunta(pregunta) 
+	button.pregunta 
+		h2=pregunta 
+		span.material-symbols-outlined add 
+mixin link(text)
+	li 
+		a(href="")=text 
+doctype html 
+html 
+	include ./componentesPug/header.pug
+	body 
+		header.header
+			.header__nav 
+				.header__nav--logo
+					img(src="../img/netflix_logo.png", alt="Logo Netflix")
+				.header__nav--btns 
+					select(name="idioma").btn__idioma
+						option(value="español" selected) Español
+						option(value="ingles")  Ingles
+					a(href="#").header__nav--btnInicio Iniciar Sesion
+			.header__content
+				.content
+					h3.header__content--title Peliculas y series ilimitadas 
+					br
+					h3.header__content--title y mucho mas
+					h5.header__content--subtitle Disfruta donde quieras. cancela cuando quieras 
+					p.header__content--text ¿Quieres ver Netflix ya? Ingresa tu email para crear una cuenta o reiniciar tu membresia de Netflix
+					.email__inicio 
+						input(type="text" placeholder="Email").email__inicio--input
+						button.email__inicio--btn Comenzar
+							span.material-symbols-outlined arrow_forward_ios
+		main.main 	
+			section.tv
+				.tv-info 
+					h2 Disfruta en tu TV.
+					p Ve en smart TV, Playstation, Xbox, Chromecast, Apple TV, reproductores de Blueray y más.
+				img.tv-image(src="../img/tv.png", alt="")
+					
+			section.mobil 
+				.mobil-image 
+					img.mobil-image--celular(src="../img/mobile-0819.jpg", alt="")
+					img.mobil-image--descargado(src="", alt="")
+				.mobil-info 
+					h2 Descarga tus series para verlas offline.
+					p Guarda tu contenido favorito y tendras siempre algo para ver
+			section.devices 
+				.devices-info 
+					h2 Disfruta donde quieras.
+					p Peliculas y series ilimitadas en tu teléfono, tablet, computadora y TV sin costo extra.
+				.devices-image 	
+					img(src="../img/device-pile.png", alt="")
+					video(src="") 
+			section.kids
+				img.kids-image(src="../img/Kids.png", alt="")
+				.kids-info 
+					h2 Crea perfiles para niños.
+					p Los niños vivirán aventuras con sus personajes favoritos en un espacio diseñado exclusivamente para ellos, sin costo con tu membresia 
+		footer.footer
+			section.preguntas-frecuentes 
+				h2.preguntas-frecuentes--title Preguntas frecuentes
+				.preguntas-frecuentes--preguntas 
+					+pregunta('¿Qué es Netflix?')
+					+pregunta('¿Cuánto cuesta Netflix?')
+					+pregunta('¿Dónde puedo ver Netflix?')
+					+pregunta('¿Cómo cancelo?')
+					+pregunta('¿Qué puedo ver en Netflix?')
+					+pregunta('¿Es bueno Netflix para los niños?')
+				.preguntas-frecuentes--ingresar 
+					p.header__content--text ¿Quieres ver Netflix ya? Ingresa tu email para crear una cuenta o reiniciar tu membresia de Netflix
+					.email__inicio 
+						input(type="text" placeholder="Email").email__inicio--input
+						button.email__inicio--btn Comenzar
+							span.material-symbols-outlined arrow_forward_ios
+			section.contact 
+				.contact-container 
+					p.contact-container--title ¿Preguntas? Llama al 01 800 917 1564
+					ul.contact-container--links 
+						+link("Preguntas frecuentes")
+						+link("Centro de ayuda")
+						+link("Cuenta")
+						+link("Prensa")
+						+link("Relaciones con inversionistas")
+						+link("Empleo")
+						+link("Canjear tarjetas de regalo")
+						+link("Comprar tarjetas de regalo")
+						+link("Formas de ver")
+						+link("Tèrminos de uso")
+						+link("Privacidad")
+						+link("Preferencias de cookies")
+						+link("Informaciòn corportativa")
+						+link("Contàctanos")
+						+link("Prueba de velocidad")
+						+link("Avisos legales")
+						+link("Solo en Netflix")
+					select(name="idioma").btn__idioma
+						option(value="español" selected) Español
+						option(value="ingles")  Ingles					
+					p.contact-container--empresa Netflix Colombia

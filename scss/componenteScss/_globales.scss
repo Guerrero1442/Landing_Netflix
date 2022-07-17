@@ -1,0 +1,21 @@
+// 1. Posicionamiento
+// 2. Modelo de caja
+// 3. Tipografia
+// 4. Visuales
+// 5. Otros
+//Variables
+$fuente1: Arial, Helvetica, sans-serif;
+$rojo-principal: #e50914;
+$negro: #000000;
+$blanco: #ffffff;
+$gris-claro: #222222;
+$gris-masclaro: #303030;
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	font-family: $fuente1;
+}
+

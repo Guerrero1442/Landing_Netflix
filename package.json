@@ -1,0 +1,13 @@
+{
+  "name": "clon_landingpage_netflix",
+  "version": "1.0.0",
+  "description": "Clon de la landing page de Netflix para repaso de HTML y CSS.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "sass --watch scss:css --style compressed",
+    "pug" : "pug --watch pug/landing.pug --out ./html"
+  },
+  "author": "Camilo Arias",
+  "license": "ISC"
+}
